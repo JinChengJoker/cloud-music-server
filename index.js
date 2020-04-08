@@ -10,7 +10,7 @@ const qiniuConfig = {
 const qiniuOptions = {
   scope: 'joker-cloud-music',
 }
-const mac = new qiniu.auth.digest.Mac({ ...qiniuConfig })
+const mac = new qiniu.auth.digest.Mac(qiniuConfig.accessKey, qiniuConfig.secretKey)
 
 // 判断是否传入端口号参数
 if (!port) {
