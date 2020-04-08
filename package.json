@@ -1,0 +1,10 @@
+{
+  "name": "cloud-music-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "JinCheng <JinChengJoker@foxmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "qiniu": "^7.3.0"
+  }
+}
