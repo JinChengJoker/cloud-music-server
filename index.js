@@ -1,12 +1,12 @@
 const http = require('http')
 const url = require('url')
+const fs =  require('fs')
 const port = process.argv[2]
 const qiniu = require('qiniu')
 
-const qiniuConfig = {
-  accessKey: 'MAk87WwaEWIRXHRk7oCkfsvZyf2W-zkFt1Utolrx',
-  secretKey: 'azMokfANcxcsYJBCdcm7FHmusXcYj3ofwEG_idSr'
-}
+let qiniuConfig = fs.readFileSync('./qiniu.json')
+qiniuConfig = JSON.parse(qiniuConfig)
+
 const qiniuOptions = {
   scope: 'joker-cloud-music',
 }
